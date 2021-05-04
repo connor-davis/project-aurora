@@ -5,12 +5,14 @@ let dev = process.env.NODE_ENV !== "production";
 let app = next({ dev });
 let handle = app.getRequestHandler();
 
+let { routes } = require("./api");
+
 app
   .prepare()
   .then(() => {
     let server = express();
 
-    // server.use("/api", api);
+    server.use("/api", routes);
 
     server.get("*", (request, response) => {
       return handle(request, response);

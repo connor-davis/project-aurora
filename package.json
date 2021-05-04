@@ -7,10 +7,13 @@
     "build": "next build",
     "start": "next start"
   },
+  "author": "Connor Davis <connor.dvs03@gmail.com>",
   "dependencies": {
     "@headlessui/react": "^1.1.1",
     "@reduxjs/toolkit": "^1.5.1",
+    "compression": "^1.7.4",
     "express": "^4.17.1",
+    "morgan": "^1.10.0",
     "next": "10.2.0",
     "react": "17.0.2",
     "react-dom": "17.0.2",
